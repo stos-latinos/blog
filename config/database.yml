@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: blog_development
+  username: stos
+  password:
+
+test:
+  <<: *default
+  database: blog_test
+  username: stos
+  password:
+
+production:
+  <<: *default
+  database: blog
